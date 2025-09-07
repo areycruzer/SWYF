@@ -1,0 +1,24 @@
+services:
+  # Backend Virtual Try-On Service
+  - type: web
+    name: virtual-tryon-api
+    env: python
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn services.virtual-tryon.flasktry:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+    autoDeploy: true
+
+  # Frontend React App
+  - type: web
+    name: virtual-tryon-frontend
+    env: node
+    region: oregon
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm run preview -- --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: NODE_VERSION
+        value: 20.9.0
+    autoDeploy: true 
