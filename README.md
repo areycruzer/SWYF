@@ -1,10 +1,10 @@
 # SWYF - See What You Fit
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/areycruzer/SWYF/blob/main/assets/logo.png" alt="SWYF Logo" width="300">
+  <img src="https://github.com/areycruzer/SWYF/blob/main/assets/logo.png" alt="SWYF Logo" width="300">
 </p>
 
-> **Project Status: Early Development (Started: April 4, 2025)**
+> **Project Status: Early Development **
 >
 > This project is currently in its initial development phase. Core features are functional but may contain bugs. Please report any issues through our issue tracker.
 
